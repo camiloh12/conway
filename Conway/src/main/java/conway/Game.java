@@ -1,7 +1,7 @@
 package conway;
 
 public class Game {
-	private final static int GRID_SIZE = 50;
+	private final static int GRID_SIZE = 55;
 
 	public Grid grid;
 	

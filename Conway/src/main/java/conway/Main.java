@@ -28,13 +28,13 @@ public class Main {
 		// game.grid.cells[0][2] = true;
 
 		// small explorer:
-		// game.grid.cells[0][1] = true;
-		// game.grid.cells[0][2] = true;
-		// game.grid.cells[1][0] = true;
-		// game.grid.cells[1][1] = true;
-		// game.grid.cells[1][3] = true;
-		// game.grid.cells[2][1] = true;
-		// game.grid.cells[2][2] = true;
+//		 game.grid.cells[5][6] = true;
+//		 game.grid.cells[5][7] = true;
+//		 game.grid.cells[6][5] = true;
+//		 game.grid.cells[6][6] = true;
+//		 game.grid.cells[6][8] = true;
+//		 game.grid.cells[7][6] = true;
+//		 game.grid.cells[7][7] = true;
 
 		// Gosper glider gun:
 		game.grid.cells[5][7] = true;
