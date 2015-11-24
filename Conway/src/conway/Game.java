@@ -5,7 +5,7 @@ public class Game {
 	public Grid grid = new Grid();
 
 	public void play() {
-		boolean[][] tempCells = new boolean[10][10];
+		boolean[][] tempCells = new boolean[Grid.GRID_SIZE][Grid.GRID_SIZE];
 
 		for (int i = 0; i <= grid.cells.length - 1; i++) {
 			for (int j = 0; j <= grid.cells[i].length - 1; j++) {

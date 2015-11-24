@@ -1,8 +1,10 @@
 package conway;
 
 public class Grid {
+	
+	public final static int GRID_SIZE = 10;
 
-	public boolean[][] cells = new boolean[10][10];
+	public boolean[][] cells = new boolean[GRID_SIZE][GRID_SIZE];
 
 	public int getNumberOfLiveNeighbors(int x, int y) {
 		int count = 0;
