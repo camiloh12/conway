@@ -11,7 +11,7 @@ public class GridTest {
 	
 	@Before
 	public void setUp() {
-		grid = new Grid();
+		grid = new Grid(5);
 	}
 
 	@Test
@@ -57,6 +57,16 @@ public class GridTest {
 		grid.cells[2][2] = true;
 		grid.cells[3][2] = true;
 		assertEquals(4, grid.getNumberOfLiveNeighbors(2,3));
+	}
+	
+	@Test
+	public void testToString() {
+		grid.cells[0][2] = true;
+		grid.cells[0][3] = true;
+		grid.cells[1][2] = true;
+		grid.cells[1][3] = true;
+		String gridString = "     \n     \nOO   \nOO   \n     \n";
+		assertEquals(gridString, grid.toString());
 	}
 
 }

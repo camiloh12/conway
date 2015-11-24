@@ -2,9 +2,13 @@ package conway;
 
 public class Grid {
 	
-	public final static int GRID_SIZE = 10;
-
-	public boolean[][] cells = new boolean[GRID_SIZE][GRID_SIZE];
+	private int size;
+	public boolean[][] cells;;
+	
+	public Grid(int size) {
+		this.size = size;
+		cells = new boolean[size][size];
+	}
 
 	public int getNumberOfLiveNeighbors(int x, int y) {
 		int count = 0;
@@ -24,9 +28,9 @@ public class Grid {
 	
 	public String toString() {
 		StringBuilder gridString = new StringBuilder();
-		for (int i = 0; i <= cells.length - 1; i++) {
-			for (int j = 0; j <= cells[i].length - 1; j++) {
-				gridString.append(cells[i][j] ? "X" : " ");
+		for (int i = 0; i <= size - 1; i++) {
+			for (int j = 0; j <= size - 1; j++) {
+				gridString.append(cells[j][i] ? "O" : " ");
 			}
 			gridString.append("\n");
 		}
