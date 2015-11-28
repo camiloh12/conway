@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class GridTest {
 	
-	Grid grid;
+	private Grid grid;
 	
 	@Before
 	public void setUp() {
@@ -45,8 +45,9 @@ public class GridTest {
 	@Test
 	public void testOutOfBounds() {
 		grid.cells[0][1] = true;
+		grid.cells[1][0] = true;
 		int liveNeighbors = grid.getNumberOfLiveNeighbors(0,0);
-		assertEquals(1, liveNeighbors);
+		assertEquals(2, liveNeighbors);
 	}
 	
 	@Test
