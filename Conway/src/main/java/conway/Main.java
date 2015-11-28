@@ -8,7 +8,7 @@ public class Main {
 		Game game = new Game();
 
 		FileGridMapper mapper = new FileGridMapper();
-		game.grid = mapper.fileToGrid("/apps/conway/conway.txt");
+		game.grid = mapper.fileToGrid("conway.txt");
 		
 		while (true) {
 			// clear the console
