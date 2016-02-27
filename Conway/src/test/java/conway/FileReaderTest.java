@@ -25,7 +25,7 @@ public class FileReaderTest {
 	
 	@Test
 	public void testReadCellString() {
-		int[] cell = mapper.getCell("4,5");
+		int[] cell = mapper.parseCellString("4,5");
 		
 		assertEquals(4, cell[0]);
 		assertEquals(5, cell[1]);
@@ -33,7 +33,7 @@ public class FileReaderTest {
 	
 	@Test
 	public void testReadMultipleCells() {
-		int[][] cells = mapper.getMultipleCells("1,3;4,5;10,15");
+		int[][] cells = mapper.parseMultipleCellsString("1,3;4,5;10,15");
 		
 		assertEquals(1, cells[0][0]);
 		assertEquals(3, cells[0][1]);

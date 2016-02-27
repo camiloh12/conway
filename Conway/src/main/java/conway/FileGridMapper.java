@@ -16,7 +16,7 @@ public class FileGridMapper {
 			buffReader = new BufferedReader(new FileReader(fileName));
 			
 			while((line = buffReader.readLine()) != null) {
-				cells = getMultipleCells(line);
+				cells = parseMultipleCellsString(line);
 			}
 		} catch (IOException io) {
 			io.printStackTrace();
@@ -37,7 +37,7 @@ public class FileGridMapper {
 		return grid;
 	}
 
-	public int[] getCell(String string) {
+	public int[] parseCellString(String string) {
 		String[] cellString = string.split(",");
 		int[] cell = new int[2];
 		cell[0] = Integer.parseInt(cellString[0]);
@@ -45,11 +45,11 @@ public class FileGridMapper {
 		return cell;
 	}
 
-	public int[][] getMultipleCells(String string) {
+	public int[][] parseMultipleCellsString(String string) {
 		String[] cellStrings = string.split(";");
 		int[][] cells = new int[cellStrings.length][2];
 		for (int i = 0; i < cellStrings.length; i++) {
-			cells[i] = getCell(cellStrings[i]);
+			cells[i] = parseCellString(cellStrings[i]);
 		}
 		return cells;
 	}
